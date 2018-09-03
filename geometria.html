@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head><script src="/distancia.js"></script></head>
+<body>
+
+<p>Após Cadastrar os pontos escolha</p>
+<p id="demo"></p>
+<script>
+function cadastro(){
+       var lista = [];
+
+for(i=0;i<=1;i++){
+var letra = prompt("Digite a letra do ponto");
+var eixoX = prompt("Digite o valor do eixo X");
+var eixoY = prompt("Digite o valor do eixo Y");
+var ajuda = [letra,eixoX,eixoY];
+lista.push(ajuda);
+
+}
+
+text = "<ul>";
+for (i = 0; i < lista.length; i++) {
+    text += "<li>" + lista[i] + "</li>";
+}
+text += "</ul>";
+
+
+document.getElementById("demo").innerHTML = text;
+
+//var x = 100 + 50;
+//document.getElementById("demo").innerHTML = x;
+}
+
+cadastro();
+
+</script>
+
+
+
+
+   <form action="/distancia.js">
+    Letra do Primeiro Ponto: <input type="text" name="fname"><br>
+    Letra do segundo ponto: <input type="text" name="lname"><br>
+    <input type="submit" value="Calcular Distancia">
+  </form>
+</body>
+</html>
